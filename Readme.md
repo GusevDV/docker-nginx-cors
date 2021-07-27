@@ -40,7 +40,7 @@ Docker and Nginx is an elegant way to bypass Same Origin Policy during developme
    For Windows PowerShell  
    `docker run -d --name nginx_cors -v "${PWD}/nginx:/etc/nginx/conf.d/" -p 80:80 nginx_cors`
    
-6. Open you project in browser (http://localhost and http://localhost/api).
+6. Open your project in browser (http://localhost and http://localhost/api).
 
 Don't forget restart container after changing config `docker container restart nginx_cors`
    
