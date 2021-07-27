@@ -27,12 +27,16 @@ Docker and Nginx is an elegant way to bypass Same Origin Policy during developme
 ```
 4. Build docker image `docker build -t nginx_cors .`
 5. Run container  
-   mac `docker run -d --name nginx_cors -v "/$(pwd)/nginx:/etc/nginx/conf.d/" -p 80:80 nginx_cors`  
-   linux `docker run -d --add-host host.docker.internal:host-gateway --name nginx_cors -v "/$(pwd)/nginx:/etc/nginx/conf.d/" -p 80:80 nginx_cors`  
-   Windows CMD `docker run -d --name nginx_cors -v "%cd%/nginx:/etc/nginx/conf.d/" -p 80:80 nginx_cors`  
-   Windows PowerShell `docker run -d --name nginx_cors -v "${PWD}/nginx:/etc/nginx/conf.d/" -p 80:80 nginx_cors`
+   For Mac  
+   `docker run -d --name nginx_cors -v "/$(pwd)/nginx:/etc/nginx/conf.d/" -p 80:80 nginx_cors`  
+   For Linux  
+   `docker run -d --add-host host.docker.internal:host-gateway --name nginx_cors -v "/$(pwd)/nginx:/etc/nginx/conf.d/" -p 80:80 nginx_cors`  
+   For Windows CMD 
+   `docker run -d --name nginx_cors -v "%cd%/nginx:/etc/nginx/conf.d/" -p 80:80 nginx_cors`  
+   For Windows PowerShell  
+   `docker run -d --name nginx_cors -v "${PWD}/nginx:/etc/nginx/conf.d/" -p 80:80 nginx_cors`
    
-6. Done
+6. Open you project in browser (http://localhost and http://localhost/api).
 
 Don't forget restart container after changing config `docker container restart nginx_cors`
    
