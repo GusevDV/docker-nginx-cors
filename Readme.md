@@ -35,7 +35,7 @@ Docker and Nginx is a simple way to bypass Same Origin Policy during development
    `docker run -d --name nginx_cors -v "/$(pwd)/nginx:/etc/nginx/conf.d/" -p 80:80 nginx_cors`  
    For Linux  
    `docker run -d --add-host host.docker.internal:host-gateway --name nginx_cors -v "/$(pwd)/nginx:/etc/nginx/conf.d/" -p 80:80 nginx_cors`  
-   For Windows CMD 
+   For Windows CMD  
    `docker run -d --name nginx_cors -v "%cd%/nginx:/etc/nginx/conf.d/" -p 80:80 nginx_cors`  
    For Windows PowerShell  
    `docker run -d --name nginx_cors -v "${PWD}/nginx:/etc/nginx/conf.d/" -p 80:80 nginx_cors`
