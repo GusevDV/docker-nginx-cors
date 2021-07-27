@@ -1,6 +1,6 @@
 ## Bypassing cors with Docker + Nginx
 
-Docker and Nginx is an elegant way to bypass Same Origin Policy during development Single Page Application(SPA) or apps using API.  This repository contains a nginx.conf and Dockerfile. It allows you to create a simple local reverse proxy.
+Docker and Nginx is a simple way to bypass Same Origin Policy during development Single Page Application(SPA) or apps using API.  This repository contains a nginx.conf and Dockerfile. It allows you to create a simple local reverse proxy.
 
 ### How to use
 
