@@ -13,7 +13,7 @@ Docker and Nginx is a simple way to bypass Same Origin Policy during development
 ```nginx 
     # [...]
     location / {
-        proxy_pass http://host.docker.internal:3000; # Proxy to Host machine (http://localhost:3000). You can change port.
+            proxy_pass http://host.docker.internal:3000; # Proxy to Host machine (http://localhost:3000). You can change port.
 	    proxy_set_header Host $host;
 	    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 	    proxy_set_header X-Real-IP $remote_addr;
@@ -21,7 +21,7 @@ Docker and Nginx is a simple way to bypass Same Origin Policy during development
     
     # Proxing all request started with /api
     location /api { 
-	    proxy_pass http://your_api_url; # Your API server
+	proxy_pass http://your_api_url; # Your API server
         proxy_set_header Host $host;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Real-IP $remote_addr;
